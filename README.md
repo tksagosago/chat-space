@@ -7,6 +7,7 @@
 ###Association
 - has_many :massages
 - has_many :proups, through: :users_proups
+- has_many :users_groups
 
 ## massages_table
 |Column|Type|Options|
@@ -26,6 +27,7 @@
 ### Assosiation
 - has_many :massages
 - has_many :users, through: :users_proups
+- has_many :users_groups
 
 ## users_groups
 |Column|Type|Options|
