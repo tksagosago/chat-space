@@ -22,7 +22,7 @@
 ## groups_table
 |Column|Type|Options|
 |------|----|-------|
-|group|string|null: false|
+|name|string|null: false|
 ### Assosiation
 - has_many :massages
 - has_many :users, through: :users_proups
