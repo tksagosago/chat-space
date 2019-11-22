@@ -1,0 +1,25 @@
+.chatheader
+  .chatheader__contents
+    .chatheader__contents__groupname
+      groupnnme
+    .chatheader__contents__member
+      member
+    .chatheader__contents__right
+      Edit
+  
+.chatmessage
+  .chatmessage__contents
+    .chatmessage__contents__user
+      テスト
+    .chatmessage__contents__time
+      2019/11/21/19:00:00
+  .chatmessage__message
+    メッセージ
+
+.chatform
+  .chatform__contents
+    <input type="text" name="message" value="" placeholder="type a message" class="chatform__contents__message">
+    %label{class: "chatform__contents__image"}
+      = icon('fas', 'image fa-2x')
+      %input{type: "file", class: "chatform__contents--hidden"}
+    <input type="submit" value="send" class="chatform__contents__form">
