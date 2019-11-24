@@ -18,8 +18,10 @@
 
 .chatform
   .chatform__contents
-    <input type="text" name="message" value="" placeholder="type a message" class="chatform__contents__message">
-    %label{class: "chatform__contents__image"}
+    %input{type: "text", class: "chatform__contents__message", placeholder: "type a message", neme: "message"}
+    -# <input type="text" name="message" value="" placeholder="type a message" class="chatform__contents__message">
+    %label{class: "chatform__contents__message__image"}
       = icon('fas', 'image fa-2x')
-      %input{type: "file", class: "chatform__contents--hidden"}
-    <input type="submit" value="send" class="chatform__contents__form">
+      %input{type: "file", class: "chatform__contents__message--hidden"}
+    %input{type: "submit", class: "chatform__contents__form", value: "send"}
+    -# <input type="submit" value="send" class="chatform__contents__form">
