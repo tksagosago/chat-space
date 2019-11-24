@@ -1,0 +1,106 @@
+.wrpper{
+  position: relative;
+}
+.chatheader {
+  border-bottom: 1px #eeeeee;
+  height: 110px;
+  width: calc(100vw - 300px);
+  border-bottom: 1px solid #eeeeee;
+  float: right;
+  &__contents{
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+
+    &__groupname{
+      padding-top: 35px;
+      font-size: 20px;
+      color: #333333;
+    }
+  }
+   
+  &__contents__member{
+    font-size: 12px;
+    color: #999999;
+    padding-top: 15px;
+ }
+  &__contents__right{
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    color: skyblue;
+    border: 1px solid;
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+.chatmessage {
+  height: 611px;
+  width: calc(100vw - 300px);
+  float: right;
+  background-color: #fafafa;
+  &__contents{
+    padding-left: 40px;
+    padding-top: 46px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__contents__user{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &__contents__time{
+    font-size: 12px;
+    color: #999999;
+    margin-left: 10px;
+  }
+  &__message{
+    font-size: 14px;
+    color: #434a54;
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+}
+
+.chatform{
+  height: 100px;
+  width: calc(100vw - 300px);
+  position: absolute;
+  top: 721px;
+  right: 0;
+  background-color: #ddd;
+  &__contents{
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+  }
+  &__contents__message--hidden{
+    display: none;
+  }
+  &__contents__message{
+    height: 50px;
+    width: 88.7%;
+    float: left;
+  }
+  &__contents__form{
+    color: #eeeeee;
+    background-color: #52a9d1;
+    height: 50px;
+    width: 100px;
+    right: 0;
+    margin-left: 15px;
+  }
+  &__contents__message__image{
+    position: absolute;
+    right: 11%;
+    top: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  input::placeholder{
+    font-size: 16px;
+    padding-left: 10px;
+    color: #434a54;
+  }
+}

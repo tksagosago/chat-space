@@ -1,0 +1,58 @@
+.sidebar {
+  width: 300px;
+  height: 100%;
+}
+
+.sideheader__contents {
+  background-color: #253141;
+  height: 110px;
+  position: relative;
+  &__user{
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 110px;
+    position: absolute;
+    left: 20px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
+  &__icon__group{
+    color: #ffffff;
+    position: absolute;
+    right: 25px;
+  }
+  &__icon__setting{
+    color: #ffffff;
+  }
+}
+
+
+
+
+
+.sidecontents {
+  height: 711px;
+  background-color: #2f3e51;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &__groups {
+    padding-top: 20px;
+    color: #ffffff;
+  }
+  &__groups__name{
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__groups__chat{
+    font-size: 11px;
+  }
+}
+
+
