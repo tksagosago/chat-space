@@ -2,11 +2,11 @@
   .sideheader
     .sideheader__contents
       .sideheader__contents__user
-        テスト
+        = current_user.name
       .sideheader__contents__icons 
         =link_to "#", class: "sideheader__contents__icon__group" do
           =icon('fas','edit')
-        =link_to "#", class: "sideheader__contents__icon__setting" do
+        =link_to edit_user_path(current_user), class: "sideheader__contents__icon__setting" do
           =icon('fas','cog')
       
 
