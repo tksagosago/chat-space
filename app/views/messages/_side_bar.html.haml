@@ -4,15 +4,17 @@
       .sideheader__contents__user
         = current_user.name
       .sideheader__contents__icons 
-        =link_to "#", class: "sideheader__contents__icon__group" do
+        =link_to new_group_path, class: "sideheader__contents__icon__group" do
           =icon('fas','edit')
         =link_to edit_user_path(current_user), class: "sideheader__contents__icon__setting" do
           =icon('fas','cog')
       
 
   .sidecontents
-    .sidecontents__groups
-      .sidecontents__groups__name
-        testgroup
-      .sidecontents__groups__chat
-        testchat
+    - current_user.groups.each do |group|
+      .sidecontents__groups
+        = link_to group_messages_path(group) do
+          .sidecontents__groups__name
+            = group.name
+          .sidecontents__groups__chat
+            メッセージはまだありません。
