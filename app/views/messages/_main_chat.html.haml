@@ -1,27 +1,24 @@
 .chatheader
   .chatheader__contents
     .chatheader__contents__groupname
-      groupnnme
+      = @group.name
     .chatheader__contents__member
-      member
+      Menber:
+      - @group.users.each do |user|
+        = user.name
     .chatheader__contents__right
-      Edit
+      = link_to edit_group_path(@group)  do
+        Edit
   
 .chatmessage
-  .chatmessage__contents
-    .chatmessage__contents__user
-      テスト
-    .chatmessage__contents__time
-      2019/11/21/19:00:00
-  .chatmessage__message
-    メッセージ
+  = render @messages
 
 .chatform
   .chatform__contents
-    %input{type: "text", class: "chatform__contents__message", placeholder: "type a message", neme: "message"}
-    -# <input type="text" name="message" value="" placeholder="type a message" class="chatform__contents__message">
-    %label{class: "chatform__contents__message__image"}
-      = icon('fas', 'image fa-2x')
-      %input{type: "file", class: "chatform__contents__message--hidden"}
-    %input{type: "submit", class: "chatform__contents__form", value: "send"}
-    -# <input type="submit" value="send" class="chatform__contents__form">
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: "chatform__contents__message", placeholder: "type a message"
+      = f.label :image, class: 'chatform__contents__message__image' do
+        = icon('fas', 'image fa-2x')
+        = f.file_field :image, class: 'chatform__contents__message--hidden'
+      = f.submit 'Send', class: 'chatform__contents__form'
+    
