@@ -59,15 +59,12 @@
     color: #999999;
     margin-left: 10px;
   }
-  &__message{
-    font-size: 14px;
-    color: #434a54;
-    padding-left: 40px;
-    padding-top: 10px;
-    position: absolute;
-    top: 65px;
-    left: 0;
-  }
+}
+
+.chatmessage__message{
+  font-size: 14px;
+  color: #434a54;
+  padding-left: 40px;
 }
 
 .chatform{
