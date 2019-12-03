@@ -50,6 +50,7 @@ $(function(){
       $('.chatmessage').append(html);
       $('.chatmessage').animate({ scrollTop: $('.chatmessage')[0].scrollHeight});
       $('.form__submit').prop('disabled', false);
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('error');
