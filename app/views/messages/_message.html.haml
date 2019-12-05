@@ -1,9 +1,10 @@
-.chatmessage__contents
-  .chatmessage__contents__user
-    = message.user.name
-  .chatmessage__contents__time
-    = message.created_at.strftime("%Y/%m/%d %H:%M")
-.chatmessage__message
-  - if message.content.present?
-    = message.content
-  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+.message_place{ data:{message_id: message.id} }
+  .chatmessage__contents
+    .chatmessage__contents__user{ data:{user: message.user.name} }
+      = message.user.name
+    .chatmessage__contents__time{ data:{time: message.created_at.strftime("%Y/%m/%d %H:%M")} }
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .chatmessage__message{ data:{content: message.content, image: message.image.url} }
+    - if message.content.present?
+      = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
