@@ -6,5 +6,6 @@
       = message.created_at.strftime("%Y/%m/%d %H:%M")
   .chatmessage__message{ data:{content: message.content, image: message.image.url} }
     - if message.content.present?
-      = message.content
+      .upper-content
+        = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

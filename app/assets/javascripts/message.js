@@ -12,7 +12,9 @@ $(function(){
             </div>
           </div>
           <div class="chatmessage__message">
-            ${message.content}
+            <div class= "upper-content">
+              ${message.content}
+            </div>
             <img class="lower-message__image" src="${message.image}">
           </div>
         </div>`
@@ -29,7 +31,9 @@ $(function(){
            </div>
          </div>
          <div class="chatmessage__message">
-           ${message.content}
+           <div class="upper-content">
+             ${message.content}
+           </div>
          </div>
        </div>`
       return html;
